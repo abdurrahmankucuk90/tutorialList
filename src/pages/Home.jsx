@@ -7,16 +7,14 @@ const Home = () => {
   const [tutorials, setTutorials] = useState();
   const url = "https://cw-axios-example.herokuapp.com/api/tutorials";
 
-
   //!Get islemi (Read)
   const getTutorials = async () => {
     try {
       const { data } = await axios.get(url);
-    setTutorials(data);
+      setTutorials(data);
     } catch (error) {
       console.log(error);
     }
-    
   };
 
   //*Sadece Companenet mount oldugunda istek yapar
@@ -24,18 +22,24 @@ const Home = () => {
     getTutorials();
   }, []);
 
-  console.log(tutorials)
-
+  console.log(tutorials);
 
   //!Post islemi yapacagiz  (Create)
-  const addTutorial = (tutorial) => {
+  const addTutorial = async (tutorial) => {
+    try {
+      await axios.post(url,tutorial)
+    } catch (error) {
+      console.log(error);
+    }
+    getTutorials();
+  };
 
-  }
+
 
   return (
     <>
-      <AddTutorial AddTutorial={addTutorial} />
-      <TutorialList tutorials = {tutorials} />
+      <AddTutorial addTutorial={addTutorial} />
+      <TutorialList tutorials={tutorials} />
       {/* <TutorialList {...tutorials} /> */}
     </>
   );
