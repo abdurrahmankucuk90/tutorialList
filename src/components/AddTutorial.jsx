@@ -44,7 +44,7 @@ const AddTutorial = ({addTutorial, deleteAllTutorials}) => {
           />
         </div>
         <button className="btn btn-danger mb-4">Submit</button>
-        <button className="btn btn-info mb-4" onClick={() => deleteAllTutorials()}>Delete</button>
+        <button className="btn btn-info mx-2 mb-4" onClick={() => deleteAllTutorials()}>Delete</button>
       </form>
     </div>
   );
