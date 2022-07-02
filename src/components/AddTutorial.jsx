@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const AddTutorial = ({addTutorial}) => {
+const AddTutorial = ({addTutorial, deleteAllTutorials}) => {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
 
@@ -44,6 +44,7 @@ const AddTutorial = ({addTutorial}) => {
           />
         </div>
         <button className="btn btn-danger mb-4">Submit</button>
+        <button className="btn btn-info mb-4" onClick={() => deleteAllTutorials()}>Delete</button>
       </form>
     </div>
   );
