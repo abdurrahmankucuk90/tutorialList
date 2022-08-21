@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 
 const Home = () => {
   const [tutorials, setTutorials] = useState();
-  const url = "https://cw-axios-example.herokuapp.com/api/tutorials";
+  const url = process.env.REACT_APP_URL;
 
   //!Get islemi (Read)
   const getTutorials = async () => {
