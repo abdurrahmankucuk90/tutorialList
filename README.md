@@ -1,11 +1,20 @@
-# API Base URLs
+## Description
+This project aims to learn how to get, delete, edit and post with AXIOS.
 
-## https://tutorials-api-cw.herokuapp.com/api/tutorials
+## Learning Outcomes
 
-## https://axios-example-cw.herokuapp.com/api/tutorials
+<ul>
+<li>
+REACT
+</li>
+<li>
+AXIOS
+</li>
 
-## https://cw-axios-example.herokuapp.com/api/tutorials
+</ul>
 
-# Deployed Frontend
+   
+## Preview
 
-## https://axios-example.netlify.app/
+
+![Form](TutorialList.gif)
